@@ -25,7 +25,7 @@ app.post("/chat", async (req, res) => {
 });
 
 async function getOpenAIResponse(message) {
-  const prompt = `${message}, (Only give information about Bangalore based restaurant)`;
+  const prompt = `${message}`;
   const response = await openai.chat.completions.create({
     messages: [{ role: "user", content: prompt }],
     model: "gpt-3.5-turbo",
