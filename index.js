@@ -86,7 +86,7 @@ app.post("/org/create", async (req, res) => {
   }
 });
 
-app.get("/org/:id", isAuthenticate, async (req, res) => {
+app.get("/org/:id", async (req, res) => {
   try {
     if (!req.params.id) {
       return res.status(constants.HTML_STATUS_CODE.UNAUTHORIZED).json({
